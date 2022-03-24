@@ -1,0 +1,76 @@
+% !TEX program = xelatex
+\documentclass[]{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[svgnames]{xcolor} 
+\usepackage{fancyhdr}
+\usepackage{tocloft}
+\usepackage[hidelinks]{hyperref}
+\usepackage[shortlabels]{enumitem}
+\usepackage[many]{tcolorbox}
+\usepackage{listings }
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{afterpage}
+\usepackage{amssymb}
+\usepackage{pdflscape}
+\usepackage{textcomp}
+\usepackage{xecolor}
+\usepackage{rotating}
+\usepackage[Kashida=on,KashidaXBFix=on]{xepersian}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage{PTSerif} 
+\usepackage{seqsplit}
+\usepackage{changepage}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{sectsty}
+\settextfont[Scale=1]{XB Niloofar}
+\begin{document}
+{
+	\thispagestyle{fancy}
+	\fancyhf{}
+	\fancyfoot{}
+	\cfoot{\thepage}
+	\lhead{99171333}
+	\rhead{هیربد بهنام}
+	\chead{تمرین کلاسی جبرخطی}
+	\renewcommand{\headrulewidth}{2pt}
+	\KashidaOff
+}
+\noindent
+در ابتدا دقت کنید که می‌توان هر تابع از $R$ به $R$ را به یک بردار به شکل
+$\begin{bmatrix}x \\ y\end{bmatrix}$
+تصور کرد.
+حال باید سه شرط زیر را برای
+$W$
+بررسی کنیم:
+\begin{enumerate}
+	\item بردار 0 در $W$ قرار دارد.
+این موضوع به راحتی قابل نشان دادن است. کافی است که تابع
+$f(x) = 0$
+را در نظر بگیریم.
+	\item به ازای هر $u$ و $v$ در $W$، $v + u$ نیز در $W$ قرار دارد.
+دقت کنید که در صورتی که بخواهیم
+$f_1$ و $f_2$
+را از $W$ انتخاب کنیم، هر کدام از آن‌ها یک حد بالا و پایین دارند.
+کافی است که
+$M$ تابع $f_1 + f_2$
+را برابر
+$\operatorname{max}(|\operatorname{max}(f_1) + \operatorname{max}(f_2)|,|\operatorname{min}(f_1) + \operatorname{min}(f_2)|)$
+قرار می‌دهیم و عنصر نشان دهنده‌ی $y$ آنرا با همدیگر جمع می‌کنیم.
+پس با این توصیف
+$f_1 + f_2 \in W$
+است.
+خلاصه: اگر دو تابعی که
+\lr{bound}
+داشته باشند را با هم جمع کنیم، تابعی به وجود می‌آید که
+\lr{bound}
+دارد.
+	\item باید نشان دهیم به ازای هر $f$، $cf \in W$ است.
+برای نشان دادن کافی است که
+$M_f$ و هر نقطه‌ی محور $y$ را ضرب در $c$ کنیم.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,24 @@
+\smalltitle{سوال 4}\\
+\begin{enumerate}[wide, labelwidth=!, labelindent=0pt]
+\item
+\begin{equation*}
+\operatorname{avg}(v) = \frac{\sum v_i}{n} \implies
+\operatorname{avg}(\alpha v + \beta 1) = \frac{\sum (\alpha v_i + \beta)}{n} = \frac{\alpha(\sum v_i) + n\beta}{n}
+= \alpha \operatorname{avg}(v) + \beta
+\end{equation*}
+\item
+\begin{gather*}
+\operatorname{std}(v) = \sqrt{\frac{\sum(v_i - \operatorname{avg}(v))^2}{n}} \implies
+\operatorname{avg}(\alpha v + \beta 1) = \sqrt{\frac{\sum((\alpha v_i + \beta) - (\alpha \operatorname{avg}(v) + \beta))^2}{n}} =\\
+\sqrt{\frac{\alpha^2\sum(v_i - \operatorname{avg}(v))^2}{n}} = 
+|\alpha|\sqrt{\frac{\sum((v_i - \operatorname{avg}(v)))^2}{n}} = |\alpha|\operatorname{std}(v)
+\end{gather*}
+\item از برهان خلف استفاده می‌کنیم. فرض می‌کنیم که تمامی عناصر از
+$v_{\operatorname{rms}}$
+کمترند. پس داریم:
+\begin{gather*}
+|a_i| < v_{\operatorname{rms}} \implies \sum a_i^2 < n ~ v_{\operatorname{rms}}^2 \implies
+\sqrt{\frac{\sum a_i^2}{n}} < |v_{\operatorname{rms}}|
+\end{gather*}
+که این تناقض است! چرا که باید به جای نامساوی مساوی در می‌آمد. پس فرض خلف باطل است.
+\end{enumerate}

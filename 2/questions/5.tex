@@ -1,0 +1,55 @@
+\smalltitle{سوال 5}\\
+ماتریس دستگاه را تشکیل می‌دهیم و شروع به حل سوال می‌کنیم.
+\begin{gather*}
+    \begin{bmatrix}
+        4 & -2 & -1 & 5 \\
+        -1 & -1 & -1 & 2 \\
+        1 & 1 & -1 & 0 \\
+        1 & 3 & -1 & 3
+    \end{bmatrix}
+\end{gather*}
+حال به صورت موقت از ردیف آخر صرف نظر می‌کنیم.
+\begin{gather*}
+    \begin{bmatrix}
+        4 & -2 & -1 & 5 \\
+        -1 & -1 & -1 & 2 \\
+        1 & 1 & -1 & 0
+    \end{bmatrix}
+    \implies
+    \begin{bmatrix}
+        1 & -5 & -4 & 11 \\
+        -1 & -1 & -1 & 2 \\
+        0 & 0 & -2 & 2
+    \end{bmatrix}
+    \implies
+    \begin{bmatrix}
+        1 & -5 & -4 & 11 \\
+        0 & -6 & -5 & 13 \\
+        0 & 0 & 1 & -1
+    \end{bmatrix}
+    \implies
+    \begin{bmatrix}
+        1 & -5 & 0 & 7 \\
+        0 & -6 & 0 & 8 \\
+        0 & 0 & 1 & -1
+    \end{bmatrix}\\
+    \implies
+    \begin{bmatrix}
+        1 & 0 & 0 & \frac{1}{3} \\
+        0 & 1 & 0 & \frac{-4}{3} \\
+        0 & 0 & 1 & -1
+    \end{bmatrix}
+    \implies \quad
+    \left\{\begin{array}{r@{\mskip\thickmuskip}l}
+        a = \frac{1}{3} \\
+        b = \frac{-4}{3} \\
+        c = -1
+    \end{array}\right.
+\end{gather*}
+پس در حال حاضر تابع ما به صورت
+$f(x,n) = \frac{x^n}{3}-\frac{4x}{3}+1$
+است. کافی است که حالا سطر آخر که حذف کردیم را تست کنیم که آیا در این تابع صدق می‌کند یا خیر:
+\begin{gather*}
+    f(3,0) = \frac{1}{3}-\frac{12}{3}+1=\frac{14}{3} \neq 3
+\end{gather*}
+پس همچین تابعی وجود ندارد.
