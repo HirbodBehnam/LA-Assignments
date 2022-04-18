@@ -1,4 +1,3 @@
-import threading
 import numpy as np
 
 line = list(map(int, input().split()))
