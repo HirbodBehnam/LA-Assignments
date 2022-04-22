@@ -40,37 +40,16 @@
 	\KashidaOff
 }
 \noindent
-در ابتدا دقت کنید که می‌توان هر تابع از $R$ به $R$ را به یک بردار به شکل
-$\begin{bmatrix}x \\ y\end{bmatrix}$
-تصور کرد.
-حال باید سه شرط زیر را برای
-$W$
-بررسی کنیم:
-\begin{enumerate}
-	\item بردار 0 در $W$ قرار دارد.
-این موضوع به راحتی قابل نشان دادن است. کافی است که تابع
-$f(x) = 0$
-را در نظر بگیریم.
-	\item به ازای هر $u$ و $v$ در $W$، $v + u$ نیز در $W$ قرار دارد.
-دقت کنید که در صورتی که بخواهیم
-$f_1$ و $f_2$
-را از $W$ انتخاب کنیم، هر کدام از آن‌ها یک حد بالا و پایین دارند.
-کافی است که
-$M$ تابع $f_1 + f_2$
-را برابر
-$\operatorname{max}(|\operatorname{max}(f_1) + \operatorname{max}(f_2)|,|\operatorname{min}(f_1) + \operatorname{min}(f_2)|)$
-قرار می‌دهیم و عنصر نشان دهنده‌ی $y$ آنرا با همدیگر جمع می‌کنیم.
-پس با این توصیف
-$f_1 + f_2 \in W$
-است.
-خلاصه: اگر دو تابعی که
-\lr{bound}
-داشته باشند را با هم جمع کنیم، تابعی به وجود می‌آید که
-\lr{bound}
-دارد.
-	\item باید نشان دهیم به ازای هر $f$، $cf \in W$ است.
-برای نشان دادن کافی است که
-$M_f$ و هر نقطه‌ی محور $y$ را ضرب در $c$ کنیم.
-\end{enumerate}
+گرام اشمیت را بر روی مجموعه‌ی
+$S = \{1, x, x^2\}$
+اجرا می‌کنیم:
+\begin{gather*}
+	q_1 = \frac{1}{\sqrt{\int_{-1}^1 1 dx}} = \frac{1}{\sqrt{2}}\\
+	\widetilde{q_2} = x - \frac{1}{\sqrt{2}} \langle\frac{1}{\sqrt{2}}, x\rangle = x - \frac{1}{\sqrt{2}} \int_{-1}^{1} \frac{x}{\sqrt{2}} dx = x\\
+	\implies q_2 = \frac{x}{\sqrt{\int_{-1}^1 x^2 dx}} = \sqrt{\frac{3}{2}}x\\
+	\widetilde{q_3} = x^2 - \frac{1}{\sqrt{2}} \langle\frac{1}{\sqrt{2}}, x^2\rangle - \sqrt{\frac{3}{2}}x \langle\sqrt{\frac{3}{2}}x, x^2\rangle = 
+	x^2 - \frac{1}{2} \int_{-1}^1 x^2 dx - \frac{3}{2}x \int_{-1}^1 x^3 dx = x^2 - \frac{1}{2} \frac{2}{3} = x^2 - \frac{1}{3}\\
+	\implies q_3 = \frac{x^2 - \frac{1}{3}}{\sqrt{\int_{-1}^1 (x^2 - \frac{1}{3})^2 dx}} = \frac{x^2 - \frac{1}{3}}{\sqrt{\frac{8}{45}}}
+\end{gather*}
 
 \end{document}
