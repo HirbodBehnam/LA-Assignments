@@ -1,0 +1,10 @@
+حال به کمک گرام اشمیت پایه‌های این فضا‌ها را پیدا می‌کنیم. برای فضای ستونی داریم:
+\begin{gather*}
+    u_1 = \begin{bmatrix}4 \\ 3 \\ 2\end{bmatrix}\\
+    u_2 = \begin{bmatrix}2 \\ 5 \\ 0\end{bmatrix} - \frac{\langle \begin{bmatrix}4 \\ 3 \\ 2\end{bmatrix}, \begin{bmatrix}2 \\ 5 \\ 0\end{bmatrix} \rangle}{4^2 + 3^2 + 2^2} \begin{bmatrix}4 \\ 3 \\ 2\end{bmatrix} 
+\end{gather*}
+و برای فضای سطری داریم:
+\begin{gather*}
+    u_1 = \begin{bmatrix}3 \\ 4 \\ 4\end{bmatrix}\\
+    u_2 = \begin{bmatrix}3 \\ 1 \\ 9\end{bmatrix} - \frac{\langle \begin{bmatrix}3 \\ 4 \\ 4\end{bmatrix}, \begin{bmatrix}3 \\ 1 \\ 9\end{bmatrix} \rangle}{3^2 + 1^2 + 9^2} \begin{bmatrix}3 \\ 1 \\ 9\end{bmatrix} 
+\end{gather*}
