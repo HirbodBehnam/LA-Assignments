@@ -9,41 +9,43 @@ $v_1 \neq 0$
 در این صورت حتما
 $\langle v_1, v_1 \rangle = ||v_1||^2 > 0$
 است.
-حال استقرا می‌زنیم. فرض کنید می‌دانیم که برداری مثل
-$w$
-وجود دارد که برای
+حال استقرا می‌زنیم. فرض کنید که به کمک گرام اشمیت پایه‌های
+$\lbrace u_1, \cdots u_m \rbrace$ را از $\lbrace v_1, \cdots v_m \rbrace$
+استخراج می‌کنیم. حال می‌دانیم طبق استقرا که
+$\forall i \in [1, m-1] ~ \langle w, v_i \rangle > 0$.
+حال می‌خواهیم این عبارت را ثابت کنیم:
+$\forall i \in [1, m] ~ \langle w + \alpha u_m, v_i \rangle > 0$.
+به صورت کلی طبق تعریف ضرب داخلی داریم
+$\langle w + \alpha u_m, v_i \rangle = \langle w , v_i \rangle + \alpha \langle u_m, v_i \rangle$.
+حال در صورتی که
+$i = m$
+باشد داریم:
+\begin{align*}
+    \langle w , v_m \rangle + \alpha \langle u_m, v_m \rangle &> 0\\
+    \alpha &> -\frac{\langle w , v_m \rangle}{\langle u_m, v_m \rangle}
+\end{align*}
+نکته‌ای که در اینجا وجود دارد این است که
+$\langle u_m, v_m \rangle$
+برابر صفر نیست چرا که
+$v_m$
+مستقل خطی از
 $\lbrace v_1, \cdots, v_{m-1} \rbrace$
-داریم
-$\forall i \in [1, m-1] ~ \langle w, v_i \rangle > 0$
 است.
-فرض کنید که می‌خواهیم که بردار مستقل خطی
-$v_m$
-از بقیه‌ی بردار‌های دیگر را به مجموعه اضافه کنیم.
-همچنین به بردار
-$w$
-یک ضریبی از
-$v_m$
-را اضافه می‌کنیم. دقت کنید که این بردار از بقیه بردار‌ها مستقل خطی است پس عملا این قسمت اضافه شده را نمی‌توان
-از بردار‌های قبلی بدست آورد.
-حال باید ثابت کنیم که
-$\forall i \in [1, m] ~ \langle w + av_m, v_i \rangle > 0$
-برقرار است.
-برای تمامی
-$i \in [1, m-1]$
-دقت کنید که اصلا
-$v_m$
-اثری بر روی آن‌ها ندارد چرا که مستقل خطی از بقیه‌ی آن‌ها است و طبق پایه‌ی استقرا
-$\langle w + av_m, v_i \rangle > 0$
-است. حال
-$\langle w + av_m, v_m \rangle > 0$
-را بررسی می‌کنیم.
-دقت کنید که می‌توان ضرب داخلی را باز کرد به صورت زیر:
-$\langle w + av_m, v_m \rangle = \langle w, v_m \rangle + \langle av_m, v_m \rangle$.
-حال کافی است که اینقدر
-$a$
-را بزرگ انتخاب کنیم که
-$\langle w, v_m \rangle + a\langle v_m, v_m \rangle > 0$
-(دقت کنید که همان طور که در قبل نیز گفته شده بود
-$\langle v_m, v_m \rangle > 0$
-است.)
-
+حال در صورتی که
+$i \neq m$
+باشد داریم:
+\begin{gather*}
+    \langle w , v_i \rangle + \alpha \langle u_m, v_i \rangle =
+    \langle w , v_i \rangle + \alpha \langle u_m, \sum_{j=1}^{i} \beta_j u_j \rangle =
+    \langle w , v_i \rangle > 0
+\end{gather*}
+در ابتدا دقت کنید که
+$\langle u_m, \sum_{j=1}^{i} \beta_j u_j \rangle$
+به خاطر این صفر شد که
+$i < m$
+است و اصلا
+$u_m$
+در این سیگما وجود ندارد!
+همچنین در نظر داشته باشید که طبق استقرا توانستیم بنویسیم که
+$\langle w , v_i \rangle > 0$
+است.
