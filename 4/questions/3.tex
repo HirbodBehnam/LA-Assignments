@@ -1,0 +1,173 @@
+\smalltitle{سوال 3}\\
+در ابتدا ثابت می‌کنیم اگر
+$A \in M_{mn} (\mathbb{R}), \operatorname{rank}(A) = r$
+آنگاه می‌توان
+$A$
+را به صورت
+$A = BC ~ (B \in M_{mr} (\mathbb{R}), C \in M_{rn} (\mathbb{R}))$
+نوشت. از این اطلاعات می‌توان نتیجه گرفت که بُعد فضای ستونی ماتریس
+$A$
+برابر
+$r$
+است. پس تعداد پایه‌های این فضا برابر
+$r$
+است و آن‌ها را
+$b_1, \cdots, b_r$
+می‌نامیم. حال ماتریس
+$B$
+را به صورت
+$B = [b_1, \cdots, b_r]$
+در نظر می‌گیریم.
+حال ماتریس
+$r$
+در
+$n$
+$C$
+را طوری در نظر می‌گیریم که برای هر ستون
+$i$ در $A$
+داشته باشیم:
+\begin{gather*}
+    a_i = \sum_{j=1}^{r} c_{ji} b_j
+\end{gather*}
+در ادامه عبارت زیر را اثبات می‌کنیم:
+\begin{gather*}
+    \operatorname{rank}(AB) + n \geq \operatorname{rank}(A) + \operatorname{rank}(B)
+\end{gather*}
+برای این اثبات در ابتدا ثابت می‌کنیم که اگر
+$A \in M_{mn} (\mathbb{R}), B \in M_{np} (\mathbb{R})$
+باشد آنگاه داریم:
+\begin{gather*}
+    \operatorname{rank}(A) + \operatorname{rank}(B) \leq \operatorname{rank}(
+    \begin{bmatrix}
+        I_n & B \\
+        A & 0
+    \end{bmatrix})
+\end{gather*}
+برای نشان دادن این موضوع نشان می‌دهیم که امکان ندارد که رنک ماتریس نشان داده شده کمتر از رنک دو ماتریس دیگر شود.
+برای این کار فرض کنید که
+$\operatorname{rank}(A) = a, \operatorname{rank}(B) = b$
+است و ستون‌های مستقل خطی هر کدام از ماتریس‌ها را
+$U_1, \cdots, U_a$ و $V_1, \cdots, V_b$
+می‌نامیم. حال شرط وابسته خطی بودن را می‌نویسیم:
+(دقت کنید که
+$e_i$
+نشان دهنده‌ی ستون متناظر به ستون
+$i$ام
+مستقل خطی ماتریس
+$A$
+در
+$I_n$
+است.)
+\begin{gather*}
+    x_1
+    \begin{bmatrix}
+        e_1 \\ U_1
+    \end{bmatrix}
+    + \cdots +
+    x_a
+    \begin{bmatrix}
+        e_a \\ U_a
+    \end{bmatrix}
+    +
+    y_1
+    \begin{bmatrix}
+        V_1 \\ 0
+    \end{bmatrix}
+    + \cdots +
+    y_b
+    \begin{bmatrix}
+        V_b \\ 0
+    \end{bmatrix}
+    = 0
+\end{gather*}
+حال دقت کنید که زمانی این معادله برقرار است که تمام
+$x_i$ها
+برابر صفر باشد و در نتیجه تمام
+$y_i$ها
+نیز برابر صفر باشند.
+(دقت کنید که ستون‌ها مستقل خطی بودند.)
+این نشان می‌دهد که ماتریس حاصل نمی‌تواند باعث شود که تعداد ستون‌های بیشتری از
+$a + b$
+در آن مستقل خطی شوند و حکم مسئله اثبات می‌شود.
+
+حال می‌دانیم که عبارت زیر برقرار است:
+\begin{gather*}
+    \begin{bmatrix}
+        I_n & 0\\
+        -A & I_m
+    \end{bmatrix}
+    \begin{bmatrix}
+        I_n & B\\
+        A & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        I_n & -B\\
+        0 & I_p
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        I_n & 0\\
+        0 & -AB
+    \end{bmatrix}
+\end{gather*}
+حال دقت کنید که جفت
+$\begin{bmatrix}
+    I_n & 0\\
+    -A & I_m
+\end{bmatrix}$
+و
+$\begin{bmatrix}
+    I_n & -B\\
+    0 & I_p
+\end{bmatrix}$
+وارون پذیر هستند چرا که مثلثی و بدون عضو 0 بر روی قطر اصلی هستند.
+این موضوع نتیجه می‌دهد که
+\begin{gather*}
+    \operatorname{rank}(\begin{bmatrix}
+        I_n & 0\\
+        0 & -AB
+    \end{bmatrix})
+    =
+    \operatorname{rank}(\begin{bmatrix}
+        I_n & B\\
+        A & 0
+    \end{bmatrix})
+\end{gather*}
+حال این موضوع را در عبارت بدست آمده در قسمت قبل استفاده می‌کنیم:
+\begin{gather*}
+    \operatorname{rank}(A) + \operatorname{rank}(B) \leq \operatorname{rank}(
+    \begin{bmatrix}
+        I_n & B \\
+        A & 0
+    \end{bmatrix}) = 
+    \operatorname{rank}(\begin{bmatrix}
+        I_n & 0\\
+        0 & -AB
+    \end{bmatrix})
+    = n + \operatorname{rank}(AB)
+\end{gather*}
+
+حال در مسئله‌ی اصلی فرض می‌کنیم که
+$\operatorname{rank}(B) = r$
+است. همچنین
+$B$
+را به صورت
+$B = U_{nr} \times V_{rn}$
+با توجه به اولین چیزی که اثبات شد تجزیه می‌کنیم.
+حال از معادله‌ی قبل داریم:
+\begin{gather*}
+    \operatorname{rank}(ABC) + r = \operatorname{rank}((AU)(VC)) + r \geq \operatorname{rank}(AU) + \operatorname{rank}(VC)
+\end{gather*}
+حال می‌دانیم که
+$\operatorname{rank}(AB) \leq \operatorname{rank}(A)$
+و
+$\operatorname{rank}(AB) \leq \operatorname{rank}(B)$
+است پس داریم:
+\begin{gather*}
+    \operatorname{rank}(AU) + \operatorname{rank}(VC) \geq \operatorname{rank}(AUV) + \operatorname{rank}(UVC) 
+    = \operatorname{rank}(AB) + \operatorname{rank}(BC)
+\end{gather*}
+پس در نتیجه داریم:
+\begin{gather*}
+    \operatorname{rank}(ABC) + r = \operatorname{rank}(ABC) + \operatorname{rank}(B) \geq \operatorname{rank}(AB) + \operatorname{rank}(BC)
+\end{gather*}
