@@ -82,7 +82,47 @@ $A$
 پس تنها در زمانی معادله فوق صفر می‌شود که تمامی
 $a_i$ها
 برابر 0 باشند. در این حالت ماتریس وارون پذیر نیست.
-
+\\\smalltitle{ب}
+سعی می‌کنیم که ماتریس
+$I$
+را در سمت چپ تولید کنیم.
+\begin{gather*}
+    \left[
+        \begin{array}{cccc|cccc}
+            1 & 0 & \cdots & a_1 & 1 & 0 & \cdots & 0\\
+            \vdots & \ddots &  & \vdots & 0 & 1 & \cdots & 0\\
+            0 & \cdots & 1 & a_n & \vdots &  & \ddots & \vdots\\
+            a_1 & \cdots & a_n & 0 & 0 & \cdots & \cdots & 1
+        \end{array}
+    \right]
+    \\
+    \left[
+        \begin{array}{cccc|cccc}
+            1 & 0 & \cdots & a_1 & 1 & 0 & \cdots & 0\\
+            \vdots & \ddots &  & \vdots & 0 & 1 & \cdots & 0\\
+            0 & \cdots & 1 & a_n & \vdots &  & \ddots & \vdots\\
+            0 & \cdots & 0 & -\sum a_i^2 & -a_1 & \cdots & -a_n & 1 
+        \end{array}
+    \right]
+    \\
+    \left[
+        \begin{array}{cccc|cccc}
+            1 & 0 & \cdots & a_1 & 1 & 0 & \cdots & 0\\
+            \vdots & \ddots &  & \vdots & 0 & 1 & \cdots & 0\\
+            0 & \cdots & 1 & a_n & \vdots &  & \ddots & \vdots\\
+            0 & \cdots & 0 & 1 & \frac{a_1}{||a||} & \cdots & \frac{a_n}{||a||} & \frac{-1}{||a||} 
+        \end{array}
+    \right]
+    \\
+    \left[
+        \begin{array}{cccc|cccc}
+            1 & 0 & \cdots & 0 & 1 -\frac{a_1^2}{||a||} & -\frac{a_1 a_2}{||a||} & \cdots & \frac{a_1}{||a||}\\
+            \vdots & \ddots &  & \vdots & -\frac{a_1 a_2}{||a||} & 1 -\frac{a_2^2}{||a||} & \cdots & \vdots\\
+            0 & \cdots & 1 & 0 & \vdots &  & \ddots & \frac{a_n}{||a||}\\
+            0 & \cdots & 0 & 1 & \frac{a_1}{||a||} & \cdots & \frac{a_n}{||a||} & \frac{-1}{||a||} 
+        \end{array}
+    \right]
+\end{gather*}
 
 
 
