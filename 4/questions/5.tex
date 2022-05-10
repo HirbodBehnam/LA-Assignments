@@ -1,4 +1,5 @@
-\smalltitle{سوال 3}\\
+\smalltitle{سوال 5}\\
+\smalltitle{الف}
 فرض کنید که داریم
 $a = \begin{bmatrix}
     a_1 \\
@@ -17,7 +18,7 @@ $a = \begin{bmatrix}
 حال باید بررسی کنیم که در چه حالاتی ستون‌های
 $A$
 وابسته خطی هستند. در این زمان ماتریس وارون پذیر نیست.
-\begin{gather*}
+\begin{align*}
     c_1\begin{bmatrix}
         1\\
         0\\
@@ -37,21 +38,51 @@ $A$
         a_n
     \end{bmatrix}
     +
-    c_{n+1}\begin{bmatrix}
+    c_{n+1}&\begin{bmatrix}
         a_1\\
         \vdots\\
         a_n\\
         0
     \end{bmatrix}
-    = 0 \implies \\
+    = 0 \stackrel{\div -c_{n+1}}{\implies} \\
+    c_1'\begin{bmatrix}
+        1\\
+        0\\
+        \vdots\\
+        a_1
+    \end{bmatrix}
+    + c_2'\begin{bmatrix}
+        0\\
+        1\\
+        \vdots\\
+        a_2
+    \end{bmatrix}
+    + \cdots + c_n'\begin{bmatrix}
+        0\\
+        \vdots\\
+        1\\
+        a_n
+    \end{bmatrix}
+    =
+    &\begin{bmatrix}
+        a_1\\
+        \vdots\\
+        a_n\\
+        0
+    \end{bmatrix}
+    \implies\\
     \quad
     \left\{\begin{array}{r@{\mskip\thickmuskip}l}
-        \sum_{i=1}^{n} c_i a_i = 0\\
-        \forall i \in \{1,\cdots,n\} ~ c_{n+1} a_i + c_i = 0
+        \sum_{i=1}^{n} c_i' a_i = 0\\
+        \forall i \in \{1,\cdots,n\} ~ c_i' = a_i
     \end{array}\right.
-\end{gather*}
-دقت کنید که معادله‌ی فوق
-$n+1$
-معادله و
-$n+1$
-مجهول است. پس یه رابطه‌ی یکتا برای زمانی که ماتریس حاصل وارون پذیر نباشد بدست می‌آید.
+    \implies
+    \sum_{i=1}^{n} a_i^2 = 0
+\end{align*}
+پس تنها در زمانی معادله فوق صفر می‌شود که تمامی
+$a_i$ها
+برابر 0 باشند. در این حالت ماتریس وارون پذیر نیست.
+
+
+
+
