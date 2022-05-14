@@ -59,11 +59,36 @@ $x (a_{ij} + a_{jk} + a_{ki}) = 0 \stackrel{x \neq 0}{\implies} a_{ij} + a_{jk} 
     \begin{bmatrix}
         0 & b_1 & b_1 + b_2 & \cdots & \sum_{i=1}^{n-1} b_i \\
         -b_1 & 0 & b_2 & \cdots & \sum_{i=2}^{n-1} b_i\\
-        -b_1 & -b_1 - b_2 & 0 & \cdots & \sum_{i=3}^{n-1} b_i\\
+        -b_1 - b_2 & -b_2 & 0 & \cdots & \sum_{i=3}^{n-1} b_i\\
         \vdots & \vdots & \vdots & \ddots & \vdots\\
         -\sum_{i=1}^{n-1} b_i & -\sum_{i=2}^{n-1} b_i & \cdots & \cdots & 0
     \end{bmatrix}
 \end{gather*}
+سعی می‌کنیم با عملیات سطری مقدماتی کمی سطر‌ها را ساده سازی کنیم.
+برای شروع هر سطر را از سطر پایینی خودش کم می‌کنیم. ماتریس حاصل به صورت زیر است:
+\begin{gather*}
+    \begin{bmatrix}
+        b_1 & b_1 & b_1 & \cdots & b_1 \\
+        b_2 & b_2 & b_2 & \cdots & b_2 \\
+        \vdots & \vdots & \vdots & \ddots & \vdots\\
+        b_{n-1} & b_{n-1} & b_{n-1} & \cdots & b_{n-1}\\
+        -\sum_{i=1}^{n-1} b_i & -\sum_{i=2}^{n-1} b_i & \cdots & \cdots & 0
+    \end{bmatrix}
+\end{gather*}
+می‌دانیم میتوان ضریبی از یک سطر را از سطر دیگر کم کرد پس داریم:
+\begin{gather*}
+    \begin{bmatrix}
+        b_1 & b_1 & b_1 & \cdots & b_1 \\
+        0 & 0 & 0 & \cdots & 0 \\
+        \vdots & \vdots & \vdots & \ddots & \vdots\\
+        0 & 0 & 0 & \cdots & 0\\
+        -\sum_{i=1}^{n-1} b_i & -\sum_{i=2}^{n-1} b_i & \cdots & \cdots & 0
+    \end{bmatrix}
+\end{gather*}
+حال سوال این است که آیا دو سطر باقی مانده وابسته خطی هستند یا خیر که مشخص است که خیر.
+پس
+\lr{rank}
+این ماتریس حداکثر دو است.
 \\\smalltitle{ب}\\
 با توجه به مطالب فوق می‌توان ماتریس زیر را مثال زد:
 \begin{gather*}
