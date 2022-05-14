@@ -110,16 +110,16 @@ $I$
             1 & 0 & \cdots & a_1 & 1 & 0 & \cdots & 0\\
             \vdots & \ddots &  & \vdots & 0 & 1 & \cdots & 0\\
             0 & \cdots & 1 & a_n & \vdots &  & \ddots & \vdots\\
-            0 & \cdots & 0 & 1 & \frac{a_1}{||a||} & \cdots & \frac{a_n}{||a||} & \frac{-1}{||a||} 
+            0 & \cdots & 0 & 1 & \frac{a_1}{||a||^2} & \cdots & \frac{a_n}{||a||^2} & \frac{-1}{||a||^2} 
         \end{array}
     \right]
     \\
     \left[
         \begin{array}{cccc|cccc}
-            1 & 0 & \cdots & 0 & 1 -\frac{a_1^2}{||a||} & -\frac{a_1 a_2}{||a||} & \cdots & \frac{a_1}{||a||}\\
-            \vdots & \ddots &  & \vdots & -\frac{a_1 a_2}{||a||} & 1 -\frac{a_2^2}{||a||} & \cdots & \vdots\\
-            0 & \cdots & 1 & 0 & \vdots &  & \ddots & \frac{a_n}{||a||}\\
-            0 & \cdots & 0 & 1 & \frac{a_1}{||a||} & \cdots & \frac{a_n}{||a||} & \frac{-1}{||a||} 
+            1 & 0 & \cdots & 0 & 1 -\frac{a_1^2}{||a||^2} & -\frac{a_1 a_2}{||a||^2} & \cdots & \frac{a_1}{||a||^2}\\
+            \vdots & \ddots &  & \vdots & -\frac{a_1 a_2}{||a||^2} & 1 -\frac{a_2^2}{||a||^2} & \cdots & \vdots\\
+            0 & \cdots & 1 & 0 & \vdots &  & \ddots & \frac{a_n}{||a||^2}\\
+            0 & \cdots & 0 & 1 & \frac{a_1}{||a||^2} & \cdots & \frac{a_n}{||a||^2} & \frac{-1}{||a||^2} 
         \end{array}
     \right]
 \end{gather*}

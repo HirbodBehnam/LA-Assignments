@@ -1,0 +1,76 @@
+\smalltitle{سوال 1}\\
+\smalltitle{الف}\\
+در ابتدا دقت کنید که در صورتی که
+$i=j=k$
+باشند داریم:
+$xa_{ii} + ya_{ii} + za_{ii} = 0$
+در نتیجه تمامی
+$a_{ii}$ها
+صفر هستند. پس تمام قطر اصلی صفر است.
+
+\noindent
+در مرحله‌ی بعدی تنها دو متغیر را مساوی هم قرار می‌دهیم و معادله‌های حاصل را می‌نویسیم.
+\begin{gather*}
+    \begin{array}{c}
+        xa_{ii} + ya_{ij} + za_{ji} = 0\\
+        xa_{ji} + ya_{ii} + za_{ij} = 0\\
+        xa_{ij} + ya_{ji} + za_{ii} = 0
+    \end{array}
+    \stackrel{a_{ii} = 0}{\implies}
+    \begin{array}{c}
+        ya_{ij} + za_{ji} = 0\\
+        xa_{ji} + za_{ij} = 0\\
+        xa_{ij} + ya_{ji} = 0
+    \end{array}
+    \stackrel{\{\times y, \times z\}}{\implies} 
+    \begin{array}{c}
+        y^2a_{ij} + yza_{ji} = 0\\
+        xza_{ij} + yza_{ji} = 0\\
+    \end{array}
+    \stackrel{(-)}{\implies}
+    a_{ij} (y^2 - xz) = 0
+\end{gather*}
+دقت کنید که در اینجا دو حالت رخ می‌دهد. یکی اینکه تمامی درایه‌های ماتریس صفر باشند که در این صورت رنک
+ماتریس برابر 0 می‌شود و حکم مسئله نقض نمی‌شود.
+در غیر این صورت نتیجه می‌شود
+$y^2 = xz$
+است. دقت کنید که دقیقا در صورتی که بقیه‌ی
+$x, y, z$
+را در معادله‌های دیگر ضرب کنیم عبارت‌های مشابه نیز بدست می‌آوریم.
+این عبارات عبارتند از:
+\begin{gather*}
+    x^2 = yz\\
+    y^2 = xz\\
+    z^2 = xy
+\end{gather*}
+دقت کنید که از این سه معادله می‌توان نتیجه گرفت که
+$x = y = z \neq 0$
+است. حال در معادله‌ی اصلی داریم:
+$ya_{ij} + za_{ji} = 0 \implies x(a_{ij} + a_{ji}) = 0 \stackrel{x \neq 0}{\implies} a_{ij} = -a_{ji}$
+این موضوع نشان می‌دهد که ماتریس ما پاد متقارن است.
+
+\noindent
+در مرحله‌ی آخر فرض کنید که
+$i \neq j \neq k$
+باشد. در این صورت داریم:
+$x (a_{ij} + a_{jk} + a_{ki}) = 0 \stackrel{x \neq 0}{\implies} a_{ij} + a_{jk} + a_{ki} = 0$
+پس در نتیجه ماتریس مورد نظر ما به صورت زیر است:
+\begin{gather*}
+    \begin{bmatrix}
+        0 & b_1 & b_1 + b_2 & \cdots & \sum_{i=1}^{n-1} b_i \\
+        -b_1 & 0 & b_2 & \cdots & \sum_{i=2}^{n-1} b_i\\
+        -b_1 & -b_1 - b_2 & 0 & \cdots & \sum_{i=3}^{n-1} b_i\\
+        \vdots & \vdots & \vdots & \ddots & \vdots\\
+        -\sum_{i=1}^{n-1} b_i & -\sum_{i=2}^{n-1} b_i & \cdots & \cdots & 0
+    \end{bmatrix}
+\end{gather*}
+\\\smalltitle{ب}\\
+با توجه به مطالب فوق می‌توان ماتریس زیر را مثال زد:
+\begin{gather*}
+    b_1 = 1, b_2 = 2\\
+    \begin{bmatrix}
+        0 & 1 & 3\\
+        -1 & 0 & 2\\
+        -3 & -2 & 0
+    \end{bmatrix}
+\end{gather*}
