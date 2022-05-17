@@ -45,6 +45,106 @@
 در نتیجه تمام ماتریس‌ها
 \lr{full rank matrix}
 هستند.
+راه حل کاملتر:
+\begin{gather*}
+    A1: \begin{bmatrix}
+        2 & 1 & 3 \\
+        -1 & 0 & 4 \\
+        6 & 2 & -4 
+        \end{bmatrix}
+        \sim
+        \begin{bmatrix}
+        2 & 1 & 3 \\
+        0 & 0.5 & 5.5 \\
+        6 & 2 & -4 
+        \end{bmatrix}
+        \\
+        \sim
+        \begin{bmatrix}
+        2 & 1 & 3 \\
+        0 & 0.5 & 5.5 \\
+        0 & -1 & -13 
+        \end{bmatrix}
+        \sim
+        \begin{bmatrix}
+        2 & 1 & 3 \\
+        0 & 0.5 & 5.5 \\
+        0 & 0 & -2 
+        \end{bmatrix}
+        \sim
+        \begin{bmatrix}
+        2 & 1 & 3 \\
+        0 & 0.5 & 0 \\
+        0 & 0 & -2 
+        \end{bmatrix}
+        \sim
+        \begin{bmatrix}
+        2 & 1 & 0 \\
+        0 & 0.5 & 0 \\
+        0 & 0 & -2 
+        \end{bmatrix}
+        \\
+        \sim
+        \begin{bmatrix}
+        2 & 0 & 0 \\
+        0 & 0.5 & 0 \\
+        0 & 0 & -2 
+        \end{bmatrix}
+        \sim
+        \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1 
+        \end{bmatrix}
+    \\ A2: \begin{bmatrix}
+        1 & 1 & 1 \\
+        -1 & 1 & 2 \\
+        4 & -2 & 2 
+        \end{bmatrix}
+        \sim
+        \begin{bmatrix}
+        1 & 1 & 1 \\
+        0 & 2 & 3 \\
+        4 & -2 & 2 
+        \end{bmatrix}
+        \sim
+        \begin{bmatrix}
+        1 & 1 & 1 \\
+        0 & 2 & 3 \\
+        0 & -6 & -2 
+        \end{bmatrix}
+        \sim
+        \begin{bmatrix}
+        1 & 1 & 1 \\
+        0 & 2 & 3 \\
+        0 & 0 & 7 
+        \end{bmatrix}
+        \\
+        \sim
+        \begin{bmatrix}
+        1 & 1 & 1 \\
+        0 & 2 & 0 \\
+        0 & 0 & 7 
+        \end{bmatrix}
+        \sim
+        \begin{bmatrix}
+        1 & 1 & 0 \\
+        0 & 2 & 0 \\
+        0 & 0 & 7 
+        \end{bmatrix}
+        \sim
+        \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 2 & 0 \\
+        0 & 0 & 7 
+        \end{bmatrix}
+        \sim
+        \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1 
+        \end{bmatrix}       
+\end{gather*}
 \\\smalltitle{ب}
 \begin{gather*}
     A_1:~
