@@ -1,0 +1,109 @@
+% !TEX program = xelatex
+\documentclass[]{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[svgnames]{xcolor} 
+\usepackage{fancyhdr}
+\usepackage{tocloft}
+\usepackage[hidelinks]{hyperref}
+\usepackage[shortlabels]{enumitem}
+\usepackage[many]{tcolorbox}
+\usepackage{listings }
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{afterpage}
+\usepackage{amssymb}
+\usepackage{pdflscape}
+\usepackage{textcomp}
+\usepackage{xecolor}
+\usepackage{rotating}
+\usepackage[Kashida=on,KashidaXBFix=on]{xepersian}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage{PTSerif} 
+\usepackage{seqsplit}
+\usepackage{changepage}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{sectsty}
+\settextfont[Scale=1]{XB Niloofar}
+\begin{document}
+{
+	\thispagestyle{fancy}
+	\fancyhf{}
+	\fancyfoot{}
+	\cfoot{\thepage}
+	\lhead{99171333}
+	\rhead{هیربد بهنام}
+	\chead{تمرین کلاسی جبرخطی}
+	\renewcommand{\headrulewidth}{2pt}
+	\KashidaOff
+}
+\noindent % https://math.stackexchange.com/a/2133979/424863
+فرض کنید که
+$B = P^{-1}AP$
+است. می‌خواهیم ثابت کنیم
+$\operatorname{rank}(A) = \operatorname{rank}(B)$
+است. برای شروع ثابت می‌کنیم که اگر
+$A$
+وارون پذیر باشد آنگاه
+$\operatorname{rank}(AB) = \operatorname{rank}(B)$
+است.
+
+\noindent
+فرض کنید که
+$v \in \operatorname{nullspace}(B)$
+باشد. پس طبق تعریف مشخص است که
+$Bv = 0$
+است. در صورتی که از چپ یک
+$A$
+را در معادله ضرب کنیم داریم که
+$ABv = ABv = 0$
+است. این نشان می‌‌دهد که
+$v \in \operatorname{nullspace}(AB)$
+نیز است. پس داریم:
+$\operatorname{nullspace}(B) \subseteq \operatorname{nullspace}(AB)$
+است. حال از طرفی دیگر فرض کنید که داریم
+$u \in \operatorname{nullspace}(AB)$
+است. آنگاه طبق تعریف
+$ABu = 0$
+است. می‌دانیم که از آنجا که
+$A$
+وارون پذیر است
+$A^{-1}$
+وجود دارد. در صورتی که این ماتریس را از چپ در معادله ضرب کنیم داریم که
+$Bu = 0$
+است. این نشان می‌دهد که
+$u \in \operatorname{nullspace}(B)$
+است. پس می‌توان نتیجه گرفت
+$\operatorname{nullspace}(AB) \subseteq \operatorname{nullspace}(B)$
+است. این دو معدله بدست آمده نشان می‌دهد که
+$\operatorname{nullspace}(B) = \operatorname{nullspace}(AB)$
+است پس از قضیه‌ی رنک می‌توان نتیجه گرفت
+$\operatorname{rank}(AB) = \operatorname{rank}(B)$
+است.
+
+\noindent
+حال ثابت می‌کنیم که اگر
+$B$
+وارون پذیر باشد آنگاه 
+$\operatorname{rank}(AB) = \operatorname{rank}(A)$
+است. برای نشان دادن این موضوع از قسمت قبل استفاده می‌کنیم:
+\begin{gather*}
+	\operatorname{rank}(AB) = \operatorname{rank}((AB)^T) = \operatorname{rank}(B^TA^T) = \operatorname{rank}(A^T) = \operatorname{rank}(A)
+\end{gather*}
+دقت کنید که اگر
+$B$
+وارون پذیر باشد آنگاه
+$B^T$
+نیز وارون پذیر است.
+
+\noindent
+حال به مسئله‌ی اصلی بر میگردیم. مشخص است که اگر
+$B = P^{-1}AP \implies PB = AP$
+است. حال در صورتی که از دو طرف رنک بگیریم و
+$P$
+وارون پذیر است داریم:
+$\operatorname{rank}(A) = \operatorname{rank}(B)$
+
+\end{document}
