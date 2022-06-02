@@ -1,0 +1,36 @@
+\smalltitle{سوال 3}\\
+\smalltitle{الف}
+می‌دانیم که
+$\det(A^i) = \det(A)^i$
+است. همچنین مشخص است که از آنجا که ماتریس
+$A$
+بالا مثلثی است
+$\det(A) = \frac{1}{2} \frac{1}{2} = \frac{1}{4}$
+است. پس داریم:
+\begin{gather*}
+    \sum_{i=1}^n \det(A^i) = \sum_{i=1}^n \det(A)^i = \sum_{i=1}^n (\frac{1}{4})^i = \frac{1}{3}(1-\frac{1}{4^n})
+\end{gather*}
+\smalltitle{ب}
+\begin{gather*}
+    \begin{vmatrix}
+        s & a^2 & b^2+c^2 \\ 
+        s & b^2 & a^2+c^2 \\ 
+        s & c^2 & a^2+b^2 \notag
+    \end{vmatrix}
+    =
+    s^3 \begin{vmatrix}
+        1 & a^2 & b^2+c^2 \\ 
+        1 & b^2 & a^2+c^2 \\ 
+        1 & c^2 & a^2+b^2 \notag
+    \end{vmatrix}
+    =
+    s^3 \begin{vmatrix}
+        1 & a^2 & a^2+b^2+c^2 \\ 
+        1 & b^2 & a^2+b^2+c^2 \\ 
+        1 & c^2 & a^2+b^2+c^2 \notag
+    \end{vmatrix}
+\end{gather*}
+دقت کنید که ستون اول و آخر مضربی از یکدیگر هستند پس دترمینان برابر 0 است.
+
+
+

@@ -1,0 +1,63 @@
+\smalltitle{سوال 1}\\
+% https://math.stackexchange.com/questions/1184825/upper-triangular-block-matrix-determinant-by-induction
+از استقرا استفاده می‌کنیم. در پایه‌ی فرض مشخص است که
+$\det(A) = \det(A_1)$
+است. حال برای حالت کلی تر ماتریس زیر را در نظر بگیرید:
+\begin{gather*}
+    X =
+    \left[
+        \begin{array}{ccccc|c}
+            A_1 & * & \cdots & \cdots & * & *\\
+            0 & A_2 & * & \cdots & * & *\\
+            0 & 0 & A_3 & \ddots & \vdots & *\\
+            \vdots & \ddots & \ddots & \ddots & \vdots & *\\
+            0 & \cdots & \cdots & \cdots & A_{n-1} & *\\
+            \hline
+            0 & \cdots & \cdots & \cdots & 0 & A_n
+        \end{array}
+    \right]
+    = \begin{bmatrix}
+        A & C\\
+        0 & B
+    \end{bmatrix}
+\end{gather*}
+دقت کنید که ماتریس سمت راست یک ماتریس بلوکی است و همچنین
+$B$
+نیز یک ماتریس بلوکی و مربعی است. طبق استقرا می‌دانیم که
+$\det(A) = \prod_{i=1}^{n-1} \det(A_i)$
+است. حال باید ثابت کنیم که
+$\det(X) = \det(A) \det(B)$
+است. در صورتی که
+$A$
+وارون پذیر نباشد، مشخص است که یک سری ستون وابسته خطی دارد. این موضوع نشان می‌دهد که حداقل دو تا از ستون‌های
+سمت چپ
+$X$
+وابسته خطی هستند. این موضوع نشان می‌دهد که ماتریس
+$X$
+هم وارون پذیر نیست اگر
+$A$
+وارون پذیر نباشد.
+پس طبق خواص دترمینان می‌دانیم که
+$\det(A) = 0 \implies \det(X) = 0$.
+در این حالت فرض عوض نمی‌شود و بر قرار می‌ماند.
+در صورتی که
+$\det(A) \neq 0$
+باشد داریم:
+\begin{gather*}
+    \begin{bmatrix} A & C \\ 0 & B\end{bmatrix} = \begin{bmatrix} A & 0 \\ 0 & I_n\end{bmatrix} \, \begin{bmatrix} I_m & A^{-1}C \\ 0 & B\end{bmatrix} \implies\\
+    \det(\begin{bmatrix} A & C \\ 0 & B\end{bmatrix}) = \det(\begin{bmatrix} A & 0 \\ 0 & I_n\end{bmatrix}) \times \det(\begin{bmatrix} I_m & A^{-1}C \\ 0 & B\end{bmatrix})
+\end{gather*}
+برای محاسبه‌ی
+$\det(\begin{bmatrix} A & 0 \\ 0 & I_n\end{bmatrix})$
+کافی است که دترمینان را از ستون سمت راست به چپ باز کنیم. در این صورت عملا داریم:
+\begin{gather*}
+    \det(\begin{bmatrix} A & 0 \\ 0 & I_n\end{bmatrix}) = \underbrace{1 \times \cdots \times 1}_{n ~ \text{times}} \times \det(A)
+\end{gather*}
+به طریق مشابه اگر بخواهیم
+$\det(\begin{bmatrix} I_m & A^{-1}C \\ 0 & B\end{bmatrix})$
+را حساب کنیم در صورتی که دترمینان را بر حسب ستون‌ها از چپ به راست باز کنیم، جواب برابر
+$\det(B)$
+می‌شود. پس در نتیجه:
+\begin{gather*}
+    \det(X) = \det(A)\det(B) = \det(A_1) \det(A_2) \cdots \det(A_n)
+\end{gather*}

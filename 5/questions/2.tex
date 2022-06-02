@@ -1,0 +1,49 @@
+\smalltitle{سوال 2}\\
+% https://en.wikipedia.org/wiki/Trace_(linear_algebra)#Trace_of_a_product
+% https://math.stackexchange.com/a/546158/424863
+\smalltitle{الف}
+طبق گفته‌های سر کلاس می‌دانیم که هر ماتریسی قابلیت تبدیل شدن به فرم جردن را دارد. این یعنی اینکه به ازای
+$P$
+خاصی داریم
+$PAP^{-1} = J$
+که مشخص است که مقدار ویژه‌های
+$A$ و $J$
+برابر است. حال از قوانین
+\lr{trace}
+داریم:
+\begin{align*}
+    \operatorname{trace}(PAP^{-1}) &= \operatorname{trace}(J)\\
+    \operatorname{trace}(APP^{-1}) &= \sum \lambda_i\\
+    \operatorname{trace}(A) &= \sum \lambda_i
+\end{align*}
+بدین ترتیب قسمت الف ثابت شد.
+\\\smalltitle{ب}
+دقت کنید که می‌‌توانیم از فرم جردن اینجا نیز استفاده کنیم. در ابتدا دقت کنید که دترمینان دو ماتریس متشابه
+برابر است چرا که
+\begin{align*}
+    \det(J) &= \det(PAP^{-1})\\
+    &= \det(P)\det(A)\det(P^{-1})\\
+    &= \det(P)\det(A) \frac{1}{\det(P)}\\
+    &= \det(A)
+\end{align*}
+حال دقت کنید که ماتریس
+$J$
+بالا مثلثی است. می‌دانیم که دترمینان ماتریس‌های مثلثی ضرب عناصر بر روی قطرشان است. پس عملا داریم:
+$\det(A) = \det(J) = \prod \lambda_i$
+است.
+
+\noindent
+راه دیگری هم برای حل سوال وجود دارد؛ می‌دانیم از معادله‌ی مشخصه که داریم
+\begin{gather*}
+    \det(A-\lambda I) = \prod (\lambda_i - \lambda)
+\end{gather*}
+می‌دانیم که
+$\lambda$
+یک عدد دلخواه است و
+$\lambda_i$
+مقدار ویژه‌های ماتریس ‌هستند. کافی است که قرار دهیم
+$\lambda = 0$
+تا به خواسته‌ی سوال برسیم.
+
+
+
