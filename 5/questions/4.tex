@@ -41,3 +41,135 @@
     \end{bmatrix}
 \end{gather*}
 \smalltitle{ج} % Matrix([[1-a,a],[b,1-b]])
+در ابتدا مقدار ویژه‌های ماتریس را پیدا می‌کنیم.
+\begin{gather*}
+    \begin{vmatrix}
+        1-\alpha-\lambda & \alpha \\
+        \beta & 1-\beta-\lambda
+    \end{vmatrix}
+    = 0
+    \implies
+    (1-\alpha-\lambda)(1-\beta-\lambda) = \alpha \beta\\
+    \implies (\lambda - 1) (\lambda + \alpha + \beta - 1) = 0
+    \implies \lambda = 1, 1 - \alpha - \beta
+\end{gather*}
+حال بردار ویژه‌ها را پیدا می‌کنیم:
+\begin{gather*} % https://www.mapleprimes.com/questions/224393-How-To-Diagonalize-A-Matrix-With-Maple
+    \lambda = 1 \implies 
+    \begin{bmatrix}
+        -\alpha & \alpha \\
+        \beta & -\beta
+    \end{bmatrix}
+    \begin{bmatrix}
+        x\\
+        y
+    \end{bmatrix} = 0
+    \implies
+    \begin{bmatrix}
+        x\\
+        y
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        1\\
+        1
+    \end{bmatrix}
+    \\
+    \lambda = 1 - \alpha - \beta \implies 
+    \begin{bmatrix}
+        \beta & \alpha \\
+        \beta & \alpha
+    \end{bmatrix}
+    \begin{bmatrix}
+        x\\
+        y
+    \end{bmatrix} = 0
+    \implies
+    \begin{bmatrix}
+        x\\
+        y
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        -\frac{\alpha}{\beta}\\
+        1
+    \end{bmatrix}
+\end{gather*}
+پس قطری شده‌ی ماتریس
+$A$
+برابر است با
+\begin{gather*}
+    \begin{bmatrix}
+        -\frac{\alpha}{\beta} & 1\\
+        1 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 - \alpha - \beta & 0\\
+        0 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        -\frac{\alpha}{\beta} & 1\\
+        1 & 1
+    \end{bmatrix} ^ {-1}
+\end{gather*}
+حال دقت کنید که
+$A^i = (PDP^{-1})^i = PD^iP^{-1}$
+است. پس در اینجا هم در صورتی که کل ماتریس‌ها را به توان
+$i$
+برسانیم داریم:
+\begin{gather*}
+    \begin{bmatrix}
+        -\frac{\alpha}{\beta} & 1\\
+        1 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 - \alpha - \beta & 0\\
+        0 & 1
+    \end{bmatrix} ^ i
+    \begin{bmatrix}
+        -\frac{\alpha}{\beta} & 1\\
+        1 & 1
+    \end{bmatrix} ^ {-1}
+    =
+    \begin{bmatrix}
+        -\frac{\alpha}{\beta} & 1\\
+        1 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        (1 - \alpha - \beta)^i & 0\\
+        0 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        -\frac{\alpha}{\beta} & 1\\
+        1 & 1
+    \end{bmatrix} ^ {-1}
+\end{gather*}
+پس شرط همگرایی این است که
+$|1 - \alpha - \beta| < 1$
+باشد که در این صورت این عبارت به صفر نزدیک می‌شود. در غیر این صورت عبارت به بی‌نهایت نزدیک می‌شود که همگرا نیست.
+\\\smalltitle{د}
+حال کافی است که
+$i = \infty$
+قرار دهیم و حاصل را پیدا کنیم.
+\begin{gather*} % Matrix([[-a/b,1],[1,1]]) . Matrix([[0,0],[0,1]]). Matrix([[-a/b,1],[1,1]])^(-1) . Matrix([[x],[y]]);
+    \begin{bmatrix}
+        -\frac{\alpha}{\beta} & 1\\
+        1 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        0 & 0\\
+        0 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        -\frac{\alpha}{\beta} & 1\\
+        1 & 1
+    \end{bmatrix} ^ {-1}
+    \begin{bmatrix}
+        x_0\\
+        y_0
+    \end{bmatrix}
+    = \begin{bmatrix}
+        \frac{\beta x_0 + \alpha y_0}{\alpha + \beta}\\
+        \frac{\beta x_0 + \alpha y_0}{\alpha + \beta}
+    \end{bmatrix}
+\end{gather*}

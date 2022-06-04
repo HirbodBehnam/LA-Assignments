@@ -1,0 +1,21 @@
+\smalltitle{سوال 6}\\
+دترمینان بلوکی ماتریس‌ها را بدست می‌آوریم. تمام آنها باید مثبت باشند تا ماتریس ما مثبت معین باشد.
+\begin{gather*}
+    \operatorname{det}(\begin{bmatrix}
+        1
+    \end{bmatrix}) = 1 > 0\\
+    \operatorname{det}(\begin{bmatrix}
+        1 & a\\
+        a & 1
+    \end{bmatrix}) = 1 - a^2 > 0 \implies -1 < a < 1\\
+    \operatorname{det}(\begin{bmatrix}
+        1 & a & a\\
+        a & 1 & a\\
+        a & a & 1
+    \end{bmatrix}) = (1 - a^2) - a(a - a^2) + a(a^2 - a) = 2a^3 - 3a^2 + 1 = (2a+1)(a-1)^2 > 0
+    \implies a > \frac{-1}{2}
+\end{gather*}
+پس با کنار هم قرار دادن بازه‌ها داریم:
+\begin{gather*}
+    \frac{-1}{2} < a < 1
+\end{gather*}
