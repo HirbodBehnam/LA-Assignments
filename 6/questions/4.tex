@@ -1,0 +1,22 @@
+\smalltitle{سوال 4}\\
+\begin{gather*}
+    f = |\Sigma|^{n/2} e^{-\frac{1}{2} \sum_{i=1}^n (x_i-\mu)^T \Sigma^{-1} (x_i-\mu)}\\
+    \ln f = -\frac{n}{2} \ln (|\Sigma|) -\frac{1}{2} \sum_{i=1}^n (x_i-\mu)^T \Sigma^{-1} (x_i-\mu)
+\end{gather*}
+\smalltitle{الف}
+\begin{gather*}
+    \frac{\partial \ln f}{\partial \mu} = 0\\
+    \implies \frac{\partial}{\partial \mu} \sum_{i=1}^n (x_i-\mu)^T \Sigma^{-1} (x_i-\mu) = \sum_{i=1}^n \frac{\partial}{\partial \mu} (x_i-\mu)^T \Sigma^{-1} (x_i-\mu) = 0\\
+    \implies \frac{\partial}{\partial \mu} (x_i-\mu)^T \Sigma^{-1} (x_i-\mu) \stackrel{g(\mu) = x_i - \mu}{=} \frac{\partial}{\partial \mu} g(\mu)^T \Sigma^{-1} g(\mu)
+    = \frac{\partial g(\mu)^T \Sigma^{-1} g(\mu)}{\partial g(\mu)} \frac{\partial g(\mu)}{\mu}\\
+    = (\Sigma^{-1} + (\Sigma^{-1})^T) g(\mu) \times (-1) = -2\Sigma^{-1} (x_i - \mu) = 0\\
+    \implies \Sigma^{-1} \sum_{i=1}^n (x_i - \mu) = 0 \implies \sum_{i=1}^n (x_i - \mu) = 0\\
+    \implies \mu = \frac{\sum_{i=1}^n x_i}{n}
+\end{gather*}
+\smalltitle{ب}
+\begin{gather*}
+    \frac{\partial \ln f}{\partial \Sigma^{-1}} = 0\\
+    \frac{\partial \frac{n}{2} \ln (|\Sigma|^{-1})}{\partial \Sigma^{-1}} + \frac{\partial \frac{-1}{2} \sum_{i=1}^n (x_i-\mu)^T \Sigma^{-1} (x_i-\mu)}{\partial \Sigma^{-1}} =
+    \frac{n}{2} \Sigma^T + \frac{-1}{2} \sum_{i=1}^{n} (x_i-\mu) (x_i-\mu)^T = 0\\
+    \implies \Sigma = \frac{\sum_{i=1}^{n} (x_i-\mu) (x_i-\mu)^T}{n}
+\end{gather*}
